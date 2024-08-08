@@ -17,6 +17,11 @@ public class Main {
                 "                                                                                                                                                             \n" +
                 "                                                                                                                                                             \n");
 
+        String PlayerName;
+        String PlayerFrom;
+        int PlayerAge;
+        String[] PlayerClass = {"Ninja", "Warrior", "Wizard"};
+
 
         // Game Intro
         System.out.println("Welcome to the Shadows of the Liffey videogame!");
@@ -30,12 +35,24 @@ public class Main {
             System.out.println("Excellent. Lets get you started traveller!");
         } else {
             System.out.println("Oh. Well piss off then");
-        }
+            return;
+        };
 
-        // Character details
+        // Character creator
         System.out.println("What is your name?");
-        String name = scanner.nextLine();
-        System.out.println("Welcome " + name);
+        PlayerName = scanner.nextLine();
+        System.out.println("Welcome to Dublin " + PlayerName + ", you look...old");
+        System.out.println("What age are you " + PlayerName + " ?" );
+        PlayerAge = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Oh christ, " + PlayerAge + ", is very old.");
+        System.out.println("It's also quite obvious you're not from around here " + PlayerName);
+        System.out.println("Where are you from?");
+        PlayerFrom = scanner.nextLine();
+        System.out.println("Oh god...so sorry to hear that");
+        System.out.println(PlayerFrom + " is a terrible place so I hear");
+        System.out.println("Anyway...you may choose one of the following classes for your journey");
+        System.out.println(PlayerClass)
 
     }
 }
