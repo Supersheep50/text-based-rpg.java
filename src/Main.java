@@ -20,7 +20,7 @@ public class Main {
         String PlayerName;
         String PlayerFrom;
         int PlayerAge;
-
+        RPGClass playerClass;
 
 
         // Game Intro
@@ -36,13 +36,14 @@ public class Main {
         } else {
             System.out.println("Oh. Well piss off then");
             return;
-        };
+        }
+        ;
 
         // Character creator
         System.out.println("What is your name?");
         PlayerName = scanner.nextLine();
         System.out.println("Welcome to Dublin " + PlayerName + ", you look...old");
-        System.out.println("What age are you " + PlayerName + " ?" );
+        System.out.println("What age are you " + PlayerName + " ?");
         PlayerAge = scanner.nextInt();
         scanner.nextLine();
         System.out.println("Oh christ, " + PlayerAge + ", is very old.");
@@ -52,31 +53,46 @@ public class Main {
         System.out.println("Oh god...so sorry to hear that");
         System.out.println(PlayerFrom + " is a terrible place so I hear");
         System.out.println("Anyway...you may choose one of the following classes for your journey");
-        System.out.print("Warrior, Thief or Frog. Which will it be?");
+        System.out.println("Warrior, Thief or Wizard. Which will it be?");
         String classChoice = scanner.nextLine();
-
-        RPGClass playerClass;
 
         switch (classChoice.toLowerCase()) {
             case "warrior":
                 playerClass = new Warrior(PlayerName);
                 break;
             case "thief":
-                // You can add the Thief class similarly
-                System.out.println("Thief class is not implemented yet.");
-                return;
-            case "frog":
-                // You can add the Frog class similarly
-                System.out.println("Frog class is not implemented yet.");
-                return;
+                playerClass = new Thief(PlayerName);
+                break;
+            case "wizard":
+                playerClass = new Wizard(PlayerName);
+                break;
             default:
                 System.out.println("Invalid choice! Defaulting to Warrior.");
                 playerClass = new Warrior(PlayerName);
-        }}
+
+        }
+        System.out.println("Well then, welcome " + PlayerName + " to Dublin!");
+        System.out.println("You are a " + PlayerAge + " year old " + playerClass + " from " + PlayerFrom);
 
 
+        // Stats and attack
+        System.out.println("Seeing as you are a " + playerClass + "lets see your stats");
+        System.out.println(playerClass.printStats());
+        System.out.println("Wow. Pretty impressive I must say. Lets try an attack shall we?");
+        System.out.println("Type attack to attack or run, to run away like a bitch");
+        String attack = scanner.nextLine();
 
-}
+        switch (attack) {
+            case "attack":
+                System.out.println(playerClass.playerAttack());
+                break;
+            case "run":
+                System.out.println("Well off you run then you little coward");
+                break;
+    }
+}}
+
+
 
 
 

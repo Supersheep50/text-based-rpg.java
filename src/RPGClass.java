@@ -11,4 +11,18 @@ public class RPGClass {
         this.magic = magic;
         this.strength = strength;
         this.intelligence = intelligence;
-    }}
+    }
+
+    public String printStats() {
+        return "Player Name: " + PlayerName + "\n" +
+                "Health: " + health + "\n" +
+                "Magic: " + magic + "\n" +
+                "Strength: " + strength + "\n" +
+                "Intelligence: " + intelligence;
+    }
+
+    public String playerAttack() {
+        return PlayerName + " attacked the enemy";
+    }
+
+}
