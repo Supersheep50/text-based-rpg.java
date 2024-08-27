@@ -52,8 +52,26 @@ public class Main {
         System.out.println("Oh god...so sorry to hear that");
         System.out.println(PlayerFrom + " is a terrible place so I hear");
         System.out.println("Anyway...you may choose one of the following classes for your journey");
-        System.out.println(PlayerClass)
+        System.out.print("Warrior, Thief or Frog. Which will it be?");
+       // System.out.println(WarriorClass + ThiefClass + FrogClass );
 
     }
+
+    // Object class for Player Classes //
+    public abstract class RPGClass {
+        protected String name;
+        protected int health;
+        protected int magic;
+        protected int strength;
+        protected int intelligence;
+
+        public RPGClass(String name, int health, int magic, int strength, int agility, int intelligence) {
+            this.name = name;
+            this.health = health;
+            this.magic = magic;
+            this.strength = strength;
+            this.intelligence = intelligence;
+        }
+
 }
 
