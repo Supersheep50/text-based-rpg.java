@@ -20,7 +20,7 @@ public class Main {
         String PlayerName;
         String PlayerFrom;
         int PlayerAge;
-        String[] PlayerClass = {"Ninja", "Warrior", "Wizard"};
+
 
 
         // Game Intro
@@ -53,25 +53,30 @@ public class Main {
         System.out.println(PlayerFrom + " is a terrible place so I hear");
         System.out.println("Anyway...you may choose one of the following classes for your journey");
         System.out.print("Warrior, Thief or Frog. Which will it be?");
-       // System.out.println(WarriorClass + ThiefClass + FrogClass );
+        String classChoice = scanner.nextLine();
 
-    }
+        RPGClass playerClass;
 
-    // Object class for Player Classes //
-    public abstract class RPGClass {
-        protected String name;
-        protected int health;
-        protected int magic;
-        protected int strength;
-        protected int intelligence;
+        switch (classChoice.toLowerCase()) {
+            case "warrior":
+                playerClass = new Warrior(PlayerName);
+                break;
+            case "thief":
+                // You can add the Thief class similarly
+                System.out.println("Thief class is not implemented yet.");
+                return;
+            case "frog":
+                // You can add the Frog class similarly
+                System.out.println("Frog class is not implemented yet.");
+                return;
+            default:
+                System.out.println("Invalid choice! Defaulting to Warrior.");
+                playerClass = new Warrior(PlayerName);
+        }}
 
-        public RPGClass(String name, int health, int magic, int strength, int agility, int intelligence) {
-            this.name = name;
-            this.health = health;
-            this.magic = magic;
-            this.strength = strength;
-            this.intelligence = intelligence;
-        }
+
 
 }
+
+
 
