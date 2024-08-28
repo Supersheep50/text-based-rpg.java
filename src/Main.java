@@ -21,6 +21,8 @@ public class Main {
         String PlayerFrom;
         int PlayerAge;
         RPGClass playerClass;
+        Dice dice = new Dice();
+        int[] diceRoll = new int[]{1,2,3,4,5,6};
 
 
         // Game Intro
@@ -102,6 +104,17 @@ public class Main {
                 "4 Phoenix Park\n" +
                 "5 Grand Canal Dock\n" +
                 "6 Temple Bar");
+        System.out.println("Would you like to roll the dice? Y/N");
+        String roll = scanner.nextLine();
+        switch (roll.toLowerCase()) {
+            case "y":
+                System.out.println(dice.rollDice(diceRoll));
+                break;
+
+            default:
+                System.out.println("Invalid input. Please enter Y or N.");
+                break;
+        }
 }}
 
 
