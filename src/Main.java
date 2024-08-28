@@ -90,7 +90,20 @@ public class Main {
                 System.out.println("Well off you run then you little coward");
                 break;
     }
+
+    // Dice Roll for location
+
+        System.out.println("Alright then! Looking good. Let me fetch the dice....");
+        System.out.println("Oh this? Oh it's how you're going to get around our fair city");
+        System.out.println("There are 6 wonderful (cough) locations to visit, take a look.");
+        System.out.println("1 O'Connell Street\n" +
+                "2 The GPO\n" +
+                "3 Stoneybatter\n" +
+                "4 Phoenix Park\n" +
+                "5 Grand Canal Dock\n" +
+                "6 Temple Bar");
 }}
+
 
 
 
