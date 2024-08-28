@@ -108,14 +108,32 @@ public class Main {
         String roll = scanner.nextLine();
         switch (roll.toLowerCase()) {
             case "y":
-                System.out.println(dice.rollDice(diceRoll));
+                System.out.println(dice.rollDice());
                 break;
 
             default:
                 System.out.println("Invalid input. Please enter Y or N.");
                 break;
         }
-}}
+        int rollResult = dice.rollDice();
+        if (rollResult == 1) {
+            System.out.println("Ah! Off to O'Connell Street we go!");
+            Locations.oConnellStreet();
+        }
+        else if (rollResult == 2) {
+            System.out.println("Ah! Off to The GPO we go!");}
+        else if (rollResult == 3){
+                System.out.println("Ah! Off to Stoneybatter we go!");}
+                else if (rollResult == 4){
+                    System.out.println("Ah! Off to Phoenix Park we go!");}
+                    else if (rollResult == 5){
+                        System.out.println("Ah! Off to Grand Canal Dock we go!");}
+                        else if (rollResult == 6){
+                            System.out.println("Ah! Off to Temple Bar we go!");
+                        }
+                    }
+                }
+
 
 
 
