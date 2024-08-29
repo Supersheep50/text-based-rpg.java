@@ -20,7 +20,8 @@ public class Locations {
                 System.out.println(playerClass.playerMagic());
             case "run":
                 System.out.println("Well off you run then you little coward");
-                break;
+                playerClass.gameOver();
+
         }
         System.out.println();
 
@@ -43,7 +44,7 @@ public class Locations {
                 break;
             case "run":
                 System.out.println("Well off you run then you little coward");
-                break;
+                playerClass.gameOver();;
         }
 
 
@@ -65,7 +66,7 @@ public class Locations {
                 break;
             case "run":
                 System.out.println("Well off you run then you little coward");
-                break;
+                playerClass.gameOver();;
         }
     }
 
@@ -85,7 +86,7 @@ public class Locations {
                 break;
             case "run":
                 System.out.println("Well off you run then you little coward");
-                break;
+                playerClass.gameOver();;
         }
     }
 
@@ -105,7 +106,7 @@ public class Locations {
                 break;
             case "run":
                 System.out.println("Well off you run then you little coward");
-                break;
+                playerClass.gameOver();;
         }
     }
 
@@ -125,7 +126,7 @@ public class Locations {
                 break;
             case "run":
                 System.out.println("Well off you run then you little coward");
-                break;
+                playerClass.gameOver();;
         }
     }
 }
