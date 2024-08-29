@@ -9,17 +9,20 @@ public class Locations {
         System.out.println("Oi...Greg! Greg!");
         System.out.println("HE TURNS AROUND");
         System.out.println("Oh christ he's running towards us!");
-        System.out.println("Type attack to attack or run, to run away like a bitch");
+        System.out.println("Type attack to attack, magic to perform magic or run to run away.");
         Scanner scanner = new Scanner(System.in);
         String junkieAttack = scanner.nextLine();
         switch (junkieAttack) {
             case "attack":
                 System.out.println(playerClass.playerAttack());
                 break;
+            case "magic":
+                System.out.println(playerClass.playerMagic());
             case "run":
                 System.out.println("Well off you run then you little coward");
                 break;
         }
+        System.out.println();
 
 
     }

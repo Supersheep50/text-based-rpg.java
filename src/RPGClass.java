@@ -28,4 +28,10 @@ public class RPGClass {
     public String playerMagic() {
         return PlayerName + " magically attacked";
     }
+
+    public static void gameOver(){
+
+        System.out.println("Game Over");
+        System.exit(0);
+    }
 }

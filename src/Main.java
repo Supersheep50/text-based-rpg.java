@@ -17,6 +17,7 @@ public class Main {
                 "                                                                                                                                                             \n" +
 
                 "                                                                                                                                                             \n");
+        // Defined Variables
         String PlayerName;
         String PlayerFrom;
         int PlayerAge;
@@ -92,8 +93,7 @@ public class Main {
                 System.out.println(playerClass.playerMagic());
                 break;
             case "run":
-                System.out.println("Well off you run then you little coward");
-                break;
+               playerClass.gameOver();
     }
 
     // Dice Roll for location
