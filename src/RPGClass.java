@@ -23,6 +23,7 @@ public class RPGClass {
 
     public String playerAttack() {
         return PlayerName + " attacked the enemy";
+
     }
 
 }

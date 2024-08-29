@@ -1,10 +1,8 @@
 import java.util.Scanner;
 
-
-
 public class Locations {
 
-    public static void oConnellStreet() {
+    public static void oConnellStreet(RPGClass playerClass) {
         System.out.println("Welcome to O'Connell Street! Or what we call the Champs-Élysées of Ireland!");
         System.out.println("Just ignore the junkies....");
         System.out.println("Wait actually...I think thats the King of the Junkies over there!!");
@@ -16,7 +14,7 @@ public class Locations {
         String junkieAttack = scanner.nextLine();
         switch (junkieAttack) {
             case "attack":
-                System.out.println(RPGClass.playerAttack());
+                System.out.println(playerClass.playerAttack());
                 break;
             case "run":
                 System.out.println("Well off you run then you little coward");
@@ -25,13 +23,6 @@ public class Locations {
 
     }
 }
-
-
-
-
-
-
-
 
 /* Dublin locations
 

@@ -15,8 +15,8 @@ public class Main {
                 "     ██ ██   ██ ██   ██ ██   ██ ██    ██ ██ ███ ██      ██     ██    ██ ██             ██    ██   ██ ██          ██      ██ ██      ██      ██         ██    \n" +
                 "███████ ██   ██ ██   ██ ██████   ██████   ███ ███  ███████      ██████  ██             ██    ██   ██ ███████     ███████ ██ ██      ██      ███████    ██    \n" +
                 "                                                                                                                                                             \n" +
-                "                                                                                                                                                             \n");
 
+                "                                                                                                                                                             \n");
         String PlayerName;
         String PlayerFrom;
         int PlayerAge;
@@ -39,7 +39,7 @@ public class Main {
             System.out.println("Oh. Well piss off then");
             return;
         }
-        ;
+
 
         // Character creator
         System.out.println("What is your name?");
@@ -118,7 +118,7 @@ public class Main {
         int rollResult = dice.rollDice();
         if (rollResult == 1) {
             System.out.println("Ah! Off to O'Connell Street we go!");
-            Locations.oConnellStreet();
+            Locations.oConnellStreet(playerClass);
         }
         else if (rollResult == 2) {
             System.out.println("Ah! Off to The GPO we go!");}
