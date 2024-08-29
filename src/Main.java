@@ -80,13 +80,16 @@ public class Main {
         // Stats and attack
         System.out.println("Seeing as you are a " + playerClass + "lets see your stats");
         System.out.println(playerClass.printStats());
-        System.out.println("Wow. Pretty impressive I must say. Lets try an attack shall we?");
-        System.out.println("Type attack to attack or run, to run away like a bitch");
-        String attack = scanner.nextLine();
+        System.out.println("Wow. Pretty impressive I must say. Lets try an attack or some magic shall we?");
+        System.out.println("Type attack to attack, magic to perform magic or run to run away. No judegement here.");
+        String test = scanner.nextLine();
 
-        switch (attack) {
+        switch (test) {
             case "attack":
                 System.out.println(playerClass.playerAttack());
+                break;
+            case "magic":
+                System.out.println(playerClass.playerMagic());
                 break;
             case "run":
                 System.out.println("Well off you run then you little coward");
@@ -121,15 +124,21 @@ public class Main {
             Locations.oConnellStreet(playerClass);
         }
         else if (rollResult == 2) {
-            System.out.println("Ah! Off to The GPO we go!");}
+            System.out.println("Ah! Off to The GPO we go!");
+            Locations.theGPO(playerClass);
+        }
         else if (rollResult == 3){
-                System.out.println("Ah! Off to Stoneybatter we go!");}
+                System.out.println("Ah! Off to Stoneybatter we go!");
+                Locations.stoneyBatter(playerClass);}
                 else if (rollResult == 4){
-                    System.out.println("Ah! Off to Phoenix Park we go!");}
+                    System.out.println("Ah! Off to Phoenix Park we go!");
+                    Locations.phoenixPark(playerClass);}
                     else if (rollResult == 5){
-                        System.out.println("Ah! Off to Grand Canal Dock we go!");}
+                        System.out.println("Ah! Off to Grand Canal Dock we go!");
+                        Locations.grandCanal(playerClass);}
                         else if (rollResult == 6){
                             System.out.println("Ah! Off to Temple Bar we go!");
+                            Locations.templeBar(playerClass);
                         }
                     }
                 }

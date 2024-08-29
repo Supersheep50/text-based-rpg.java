@@ -25,5 +25,7 @@ public class RPGClass {
         return PlayerName + " attacked the enemy";
 
     }
-
+    public String playerMagic() {
+        return PlayerName + " magically attacked";
+    }
 }
